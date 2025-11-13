@@ -41,7 +41,28 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.4" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_theme_onBackground"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="0"
+        android:textColorHint="@color/md_theme_onPrimary"
+        android:textSize="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/InterfazTL"
+        app:layout_constraintLeft_toRightOf="@+id/GLV2"
+        app:layout_constraintRight_toLeftOf="@+id/GLV1"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"/>
+
     <TableLayout
+        android:id="@+id/InterfazTL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/GLH1"
@@ -55,39 +76,45 @@
             android:layout_marginBottom="10dp">
             <Button
                 android:id="@+id/B_borrar"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="AC" />
+                android:text="AC"
+                style="@style/BotonPersonalizadoTop"/>
 
-            <Button
-                android:id="@+id/B_negativo_positivo"
-                android:layout_width="60dp"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/B_borrar_ultimo"
+                android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="%" />
+                app:icon="@drawable/baseline_arrow_back_24"
+                app:iconSize="40dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                style="@style/BotonBorrar"/>
 
             <Button
                 android:id="@+id/B_porcentaje"
-                android:layout_width="60dp"
+                android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="30dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="+/-" />
+                android:text="%"
+                style="@style/BotonPersonalizadoTop"/>
 
             <Button
-                android:id="@+id/B_Dividir"
+                android:id="@+id/B_dividir"
                 android:layout_width="60dp"
                 android:layout_height="70dp"
                 android:text="÷"
@@ -96,7 +123,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 android:textSize="30dp"
-                />
+                style="@style/BotonPersonalizadoOperadores"/>
 
         </TableRow>
 
@@ -106,7 +133,7 @@
             android:layout_marginBottom="10dp">
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/B_num7"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_marginLeft="5dp"
@@ -114,10 +141,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 android:text="7"
-                android:textSize="40dp" />
+                android:textSize="40dp"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button25"
+                android:id="@+id/B_num8"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -125,10 +153,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="8" />
+                android:text="8"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button26"
+                android:id="@+id/B_num9"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -136,10 +165,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="9" />
+                android:text="9"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button27"
+                android:id="@+id/B_multiplicar"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -147,7 +177,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="×" />
+                android:text="×"
+                style="@style/BotonPersonalizadoOperadores"/>
         </TableRow>
 
         <TableRow
@@ -156,7 +187,7 @@
             android:layout_marginBottom="10dp">
 
             <Button
-                android:id="@+id/button39"
+                android:id="@+id/B_num4"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -164,10 +195,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="4" />
+                android:text="4"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button38"
+                android:id="@+id/B_num5"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -175,10 +207,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="5" />
+                android:text="5"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button37"
+                android:id="@+id/B_num6"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -186,10 +219,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="6" />
+                android:text="6"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button36"
+                android:id="@+id/B_restar"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:layout_marginLeft="5dp"
@@ -197,7 +231,8 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
                 android:text="-"
-                android:textSize="40dp" />
+                android:textSize="40dp"
+                style="@style/BotonPersonalizadoOperadores"/>
         </TableRow>
 
         <TableRow
@@ -206,7 +241,7 @@
             android:layout_marginBottom="10dp">
 
             <Button
-                android:id="@+id/button35"
+                android:id="@+id/B_num1"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -214,10 +249,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="1" />
+                android:text="1"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button34"
+                android:id="@+id/B_num2"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -225,10 +261,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="2" />
+                android:text="2"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button33"
+                android:id="@+id/B_num3"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -236,10 +273,11 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="3" />
+                android:text="3"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button32"
+                android:id="@+id/B_sumar"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -247,7 +285,8 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:text="+" />
+                android:text="+"
+                style="@style/BotonPersonalizadoOperadores"/>
         </TableRow>
 
         <TableRow
@@ -256,7 +295,7 @@
             android:layout_marginBottom="10dp">
 
             <Button
-                android:id="@+id/button41"
+                android:id="@+id/B_num0"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:textSize="40dp"
@@ -265,39 +304,33 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:layout_span="2" />
+                android:layout_span="2"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button40"
+                android:id="@+id/B_coma"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:textSize="40dp"
                 android:layout_column="2"
-                android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginBottom="2dp"
-                android:text="," />
-
-
-
-            <!--            <Button-->
-            <!--                android:id="@+id/button42"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="70dp"-->
-            <!--                android:textSize="40dp"-->
-            <!--                android:text="=" />-->
+                android:text=","
+                android:textSize="40dp"
+                style="@style/BotonPersonalizadoNumeros"/>
 
             <Button
-                android:id="@+id/button43"
+                android:id="@+id/B_igual"
+                style="@style/BotonPersonalizadoOperadores"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
-                android:textSize="40dp"
-                android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginRight="5dp"
                 android:layout_marginBottom="2dp"
-                android:text="=" />
+                android:text="="
+                android:textSize="40dp" />
         </TableRow>
     </TableLayout>
 
