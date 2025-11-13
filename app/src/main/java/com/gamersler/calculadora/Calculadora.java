@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,7 +60,7 @@ public class Calculadora extends AppCompatActivity {
                 findViewById(R.id.B_igual)
         ));
 
-        for (Button boton_numerico:botonesNumericos) {
+        for (Button boton_numerico : botonesNumericos) {
             boton_numerico.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -69,18 +70,27 @@ public class Calculadora extends AppCompatActivity {
             });
         }
 
-        for (Button boton_operacion:botonesOperaciones) {
+        for (Button boton_operacion : botonesOperaciones) {
             boton_operacion.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String simbolo = boton_operacion.getText().toString();
+
                     mostrarEnPantalla(simbolo);
                 }
             });
-            }
-        }
-    public void mostrarEnPantalla(String valor) {
-        String textoActual = textoTV.getText().toString();
-        textoTV.setText(textoActual + valor);
         }
     }
+
+    public void mostrarEnPantalla(String valor) {
+        String textoActual = textoTV.getText().toString();
+        boolean valorEsSimbolo = valor.equals("+") || valor.equals("-") || valor.equals("÷") || valor.equals("×") || valor.equals("=") || valor.equals("%");
+        boolean terminaConSimbolo = textoActual.endsWith("+") || textoActual.endsWith("-") || textoActual.endsWith("÷") || textoActual.endsWith("×") || textoActual.endsWith("=") || textoActual.endsWith("%");
+        if (valorEsSimbolo && terminaConSimbolo) {
+            Toast.makeText(Calculadora.this, "No se pueden repetir símbolos seguidos", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        textoTV.setText(textoActual + valor);
+    }
+
+}
