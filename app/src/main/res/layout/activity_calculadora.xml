@@ -54,6 +54,7 @@
         android:gravity="right"
         android:hint="0"
         android:textColorHint="@color/md_theme_onPrimary"
+        android:textColor="@color/md_theme_onPrimary"
         android:textSize="70dp"
         app:layout_constraintBottom_toTopOf="@+id/InterfazTL"
         app:layout_constraintLeft_toRightOf="@+id/GLV2"
@@ -317,7 +318,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginBottom="2dp"
-                android:text=","
+                android:text="."
                 android:textSize="40dp"
                 style="@style/BotonPersonalizadoNumeros"/>
 
